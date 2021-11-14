@@ -1,0 +1,155 @@
+@font-face {
+	font-family: 'AdiHaus';
+	src: URL('https://assets.codepen.io/6060109/adihaus_regular.ttf')
+		format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AdiHaus';
+	src: url('https://assets.codepen.io/6060109/adihaus_bold.ttf')
+		format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	min-width: 100%;
+	min-height: 100vh;
+	font-family: AdiHaus;
+	font-size: 62.5%;
+}
+
+.cs-logo {
+	margin: 1.5rem 0;
+}
+
+.cs-container-mobile,
+.cs-annotation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cs__banner-mobile {
+	background-image: url('https://assets.codepen.io/6060109/mobile-shoes.jpg');
+	background-repeat: no-repeat;
+	width: 100%;
+	max-width: 40rem;
+	height: 40vh;
+	background-size: cover;
+	background-position: top 50% left 50%;
+}
+.cs-annotation {
+	width: 80%;
+	max-width: 32rem;
+	margin: 3rem 0 5rem 0;
+}
+.cs-annotation__heading,
+.cs-annotation__greeting {
+	text-align: center;
+}
+.cs-annotation__heading {
+	font-size: 4.8rem;
+	text-transform: uppercase;
+	color: #423a3a;
+	width: min-content;
+}
+.cs-annotation__heading:nth-of-type(1) {
+	font-weight: 400;
+	color: #2f80ed;
+	margin-bottom: 1rem;
+}
+
+.cs-annotation__greeting {
+	font-size: 1.4rem;
+	line-height: 2.8rem;
+	color: #333333;
+	font-weight: 500;
+	margin-top: 2rem;
+}
+.cs-email-form {
+	border: 2px solid #b2b2b2;
+	border-right: none;
+	width: 80%;
+	max-width: 32rem;
+	height: 4.8rem;
+	display: flex;
+	border-radius: 3px;
+	align-items: center;
+	margin-bottom: 5rem;
+}
+
+.cs-email-form input {
+	height: 100%;
+	border: none;
+}
+.cs-email-form input:nth-of-type(1) {
+	width: 100%;
+}
+.cs-email-form input:nth-of-type(2) {
+	width: 64px;
+	background: linear-gradient(
+		274deg,
+		rgba(51, 51, 51, 1) 0%,
+		rgba(117, 117, 117, 1) 100%
+	);
+	border-radius: 3px;
+	color: white;
+	font-weight: 300;
+	font-family: AdiHaus;
+	font-size: 3rem;
+	height: 48px;
+}
+
+input:nth-of-type(1)::placeholder {
+	font-family: AdiHaus;
+	text-indent: 2rem;
+}
+
+.cs-desktop-image {
+	display: none;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.cs-container {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		background-image: url('https://assets.codepen.io/6060109/waves.png');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	.cs-desktop-image {
+		display: block;
+		width: 40%;
+	}
+	.cs__banner-mobile {
+		display: none;
+	}
+	.cs-container-mobile {
+		flex-grow: 1;
+		margin: 3rem 0 0 15rem;
+		padding: 0 auto;
+	}
+	.cs-container-mobile,
+	.cs-annotation {
+		align-items: start;
+	}
+	.cs-annotation__heading {
+		text-align: left;
+	}
+	.cs-annotation__greeting {
+		text-align: justify;
+	}
+	.cs-email-form input:nth-of-type(2) {
+		width: 120px;
+	}
+}
